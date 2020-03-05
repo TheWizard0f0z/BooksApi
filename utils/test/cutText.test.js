@@ -26,4 +26,9 @@ describe('CutText', () => {
     expect(cutText('Lorem Ipsum', 0)).to.equal('Error');
     expect(cutText('Lorem Ipsum', -6)).to.equal('Error');
   });
+
+  it('should return "content" without changes if proper args', () => {
+    expect(cutText('Lorem Ipsum', 40)).to.equal('Lorem Ipsum');
+    expect(cutText('Lorem Ipsum', 11)).to.equal('Lorem Ipsum');
+  });
 });
